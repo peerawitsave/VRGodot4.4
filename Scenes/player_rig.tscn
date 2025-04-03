@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b15mw5so2bgfh"]
+
+[ext_resource type="Script" uid="uid://byam4bp78pih5" path="res://Scenes/player_rig.gd" id="1_nqn4a"]
+
+[node name="PlayerRig" type="Node3D"]
+script = ExtResource("1_nqn4a")
+
+[node name="FakeHead" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="FakeHead"]
+current = true

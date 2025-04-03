@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bk10ug2j36i8r"]
+[gd_scene load_steps=9 format=3 uid="uid://bk10ug2j36i8r"]
 
 [ext_resource type="PackedScene" uid="uid://ddneys6hhnini" path="res://Models/Classroom/SimpleFloor.tscn" id="1_cw5vt"]
 [ext_resource type="Script" uid="uid://37xaisjvtc8k" path="res://Scripts/Scene1FloorController.cs" id="1_embbr"]
-[ext_resource type="ArrayMesh" uid="uid://bgne7aoj26tun" path="res://Models/Light01.vox" id="2_oeq2w"]
 [ext_resource type="PackedScene" uid="uid://ccm70bu4r0y1s" path="res://Models/Board/board.tscn" id="3_kl607"]
 [ext_resource type="Material" uid="uid://k4y1b15kqekx" path="res://Models/Board/BoardBlack.tres" id="4_gqjfe"]
 [ext_resource type="PackedScene" uid="uid://dkb1oeb0htpsl" path="res://Models/Chair/chair.tscn" id="5_gqjfe"]
 [ext_resource type="PackedScene" uid="uid://bosp3baam0wet" path="res://Models/Desk/desk.tscn" id="5_xs76b"]
+[ext_resource type="PackedScene" uid="uid://be8ckq4gl0lbr" path="res://Scenes/Lights/light.tscn" id="7_add8t"]
+[ext_resource type="PackedScene" uid="uid://dmh4s747ygkvt" path="res://Scenes/Lights/light_flicker.tscn" id="8_yihlr"]
 
 [node name="Scene1_Floor2" type="Node3D"]
 script = ExtResource("1_embbr")
@@ -20,6 +21,12 @@ visible = false
 [node name="Door6" parent="SimpleFloor" index="25"]
 visible = false
 
+[node name="Light01" parent="SimpleFloor" index="31"]
+visible = false
+
+[node name="Light01" parent="SimpleFloor/Light01" index="0"]
+mesh = null
+
 [node name="OmniLight3D" parent="SimpleFloor/Light01/Light01" index="0"]
 light_energy = 1.0
 shadow_enabled = true
@@ -27,6 +34,12 @@ shadow_bias = 1.0
 shadow_opacity = 0.2
 omni_range = 10.0
 omni_attenuation = 0.8
+
+[node name="Light04" parent="SimpleFloor" index="32"]
+visible = false
+
+[node name="Light01" parent="SimpleFloor/Light04" index="0"]
+mesh = null
 
 [node name="OmniLight3D" parent="SimpleFloor/Light04/Light01" index="0"]
 light_energy = 1.0
@@ -38,7 +51,6 @@ omni_attenuation = 0.8
 
 [node name="Light02" type="MeshInstance3D" parent="SimpleFloor/Light04" index="1"]
 transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, 6.94131, 0, -2.86502)
-mesh = ExtResource("2_oeq2w")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SimpleFloor/Light04/Light02"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.07604, 0)
@@ -48,7 +60,6 @@ omni_range = 10.0
 
 [node name="Light03" type="MeshInstance3D" parent="SimpleFloor/Light04" index="2"]
 transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, 5.68434e-14, 0, 1, 6.94131, 0, 2.8027)
-mesh = ExtResource("2_oeq2w")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SimpleFloor/Light04/Light03"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.07604, 0)
@@ -56,8 +67,12 @@ shadow_enabled = true
 shadow_opacity = 0.2
 omni_range = 10.0
 
+[node name="Light05" parent="SimpleFloor" index="33"]
+visible = false
+
 [node name="Light01" parent="SimpleFloor/Light05" index="0"]
 transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 1.00068e-07, 0, 1.14464)
+mesh = null
 
 [node name="OmniLight3D" parent="SimpleFloor/Light05/Light01" index="0"]
 light_energy = 1.0
@@ -67,6 +82,12 @@ shadow_opacity = 0.2
 omni_range = 10.0
 omni_attenuation = 0.8
 
+[node name="Light02" parent="SimpleFloor" index="34"]
+visible = false
+
+[node name="Light01" parent="SimpleFloor/Light02" index="0"]
+mesh = null
+
 [node name="OmniLight3D" parent="SimpleFloor/Light02/Light01" index="0"]
 light_energy = 1.0
 shadow_enabled = true
@@ -74,6 +95,12 @@ shadow_bias = 1.0
 shadow_opacity = 0.2
 omni_range = 10.0
 omni_attenuation = 0.8
+
+[node name="Light03" parent="SimpleFloor" index="35"]
+visible = false
+
+[node name="Light01" parent="SimpleFloor/Light03" index="0"]
+mesh = null
 
 [node name="OmniLight3D" parent="SimpleFloor/Light03/Light01" index="0"]
 light_energy = 1.0
@@ -311,6 +338,18 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.053
 
 [node name="Desk_54" parent="." instance=ExtResource("5_xs76b")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.06869, 0.0148347, 21.02)
+
+[node name="Light" parent="." instance=ExtResource("7_add8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367205, 2, 20.3974)
+
+[node name="Light-Flicker" parent="." instance=ExtResource("8_yihlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299827, 1.94763, 12.8161)
+
+[node name="Light-Flicker2" parent="." instance=ExtResource("8_yihlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.432267, 2.44589, 46.1901)
+
+[node name="Light-Flicker3" parent="." instance=ExtResource("8_yihlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112159, 1.74685, 35.9437)
 
 [editable path="SimpleFloor"]
 [editable path="SimpleFloor/Light01"]
