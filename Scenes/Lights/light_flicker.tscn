@@ -6,7 +6,5 @@
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_color = Color(1, 0.901961, 0.85098, 1)
-light_energy = 0.5
 shadow_enabled = true
 script = ExtResource("1_u1tkq")
-intensity_max = 1.0

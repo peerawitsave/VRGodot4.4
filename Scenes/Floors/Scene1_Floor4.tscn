@@ -340,16 +340,16 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.053
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.06869, 0.0148347, 21.02)
 
 [node name="Light" parent="." instance=ExtResource("7_add8t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367205, 2, 20.3974)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367205, 3.71944, 20.3974)
 
 [node name="Light-Flicker" parent="." instance=ExtResource("8_yihlr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299827, 1.94763, 12.8161)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299827, 3.47879, 12.8161)
 
 [node name="Light-Flicker2" parent="." instance=ExtResource("8_yihlr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.432267, 2.44589, 46.1901)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.432267, 3.58608, 46.1901)
 
 [node name="Light-Flicker3" parent="." instance=ExtResource("8_yihlr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112159, 1.74685, 35.9437)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112159, 3.62597, 35.9437)
 
 [editable path="SimpleFloor"]
 [editable path="SimpleFloor/Light01"]
